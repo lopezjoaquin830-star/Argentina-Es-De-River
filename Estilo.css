@@ -1,0 +1,443 @@
+/* 0.  VINCULA ESTE ARCHIVO AL ARCHIVO HTML */
+/* Nota: No olvides vincular este archivo CSS en el head de tu HTML */
+/* <link href="style.css" rel="stylesheet"> */
+
+/* 1. IMPORTACIÓN DE FUENTES (Google Fonts de River) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;900&display=swap');
+
+/* 1. ESTILOS GENERALES */
+/* Estilos generales para resetear márgenes y paddings, y definir la tipografía predeterminada */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Cambiada por la tipografía de lectura limpia */
+}
+
+/* 2. FONDO DE PÁGINA */
+/* Estilos relacionados con el fondo de la página */
+body {
+    background: url(imagnes/Fondo\ final.jpg) 0 0 no-repeat fixed;
+    background-size: cover;
+    background-color: #fcfcfc; /* Fondo de respaldo sutil */
+}
+
+/* 3. CONTENEDOR */
+/* Estilos para el contenedor principal de la página */
+#wrap-main {
+    max-width: 1250px; /* Ampliado para que los mapas e imágenes luzcan mejor */
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente para que se lea el texto sobre tu foto de fondo */
+    padding: 25px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. CONTENIDO */
+/* Estilos para el contenido principal de la página con la identidad del club */
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 46px; /* Ajustado para un diseño web moderno y elegante */
+    text-align: center;
+    color: #E30613; /* El rojo oficial de River */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 30px 0 20px 0;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: #1a1a1a; /* Negro institucional */
+    margin: 0 0 20px 0;
+}
+
+/* Estilo para frases destacadas de h2 si están solas en el body */
+body > h2, #wrap-main > h2 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #555555;
+    padding: 20px;
+    border-left: 5px solid #E30613; /* Línea de la banda roja */
+    background-color: #f5f5f5;
+    border-radius: 0 8px 8px 0;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #555555;
+    padding: 28px;
+    border-left: 5px solid #E30613; /* Línea de la banda roja */
+    background-color: #f5f5f5;
+    border-radius: 0 8px 8px 0;
+    
+}
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #E30613; /* Negro institucional */
+    margin: 0 0 20px 0;
+}
+p {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333333; /* Gris oscuro para evitar fatiga visual */
+    text-align: justify;
+    line-height: 1.6;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li, ol li {
+    margin: 5px 0;
+    color: #333333;
+}
+
+/* Enlaces generales fuera del nav */
+a {
+    color: #E30613;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #E30613; /* Tono bordó para los links ya visitados */
+}
+
+hr {
+    border: 0;
+    background-color: #E30613; /* Línea divisoria roja */
+    height: 2px;
+    margin: 30px 0;
+}
+
+img, .video-container video {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px; /* Bordes redondeados sutiles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto interactivo al pasar el mouse por las imágenes */
+img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(227, 6, 19, 0.15); /* Destello rojo */
+}
+
+#Queen_logo {
+    height: auto;
+    width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    font-style: italic;
+    font-weight: lighter;
+    color: #666666;
+    text-align: center;
+    margin: -15px auto 20px;
+    font-size: 14px;
+}
+
+/* ID SELECTORS PARA SECCIONES INTERNAS */
+#Mapa, #Sugerencias, #media {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* 5. NAVEGADOR Y FOOTER */
+/* Estilos para la navegación y el pie de página */
+nav {
+    text-align: center;
+    background-color: #1a1a1a; /* Barra negra institucional */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 10px;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco sobre barra negra */
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Transición para las pseudoclases */
+}
+
+/* Pseudoclases del menú (Lo aprendido en Codecademy) */
+nav a:hover {
+    color: #E30613; /* Cambia a rojo */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+nav a:active {
+    color: #b3040f; /* Rojo más oscuro al hacer clic */
+}
+
+#footer {
+    background-color: #1a1a1a; /* Cambiado a negro para cerrar con estilo institucional */
+    color: #FFFFFF; /* Texto blanco */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Media Query para dispositivos móviles (pantallas de 600px o menos) */
+@media screen and (max-width: 600px) {
+    
+    /* Ajuste de los títulos para que no se desborden */
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+
+    body > h2, #wrap-main > h2 {
+        font-size: 16px;
+    }
+
+    /* Modificación del menú de navegación para que los botones 
+       se apilen verticalmente si no entran cómodamente de lado */
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    /* Ajuste del logo para que no quede gigante en pantallas chicas */
+    #Queen_logo {
+        width: 80%;
+    }
+}
+
+.autor-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 50vw; 
+    margin: 20px 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.autor-foto {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px; 
+    border: 3px solid #E51A22;
+    flex-shrink: 0;
+}
+
+.autor-texto {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px; 
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Modificado para darle aire y alineación abajo del texto */
+.contacto-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;         
+    margin-top: 40px;   /* Espacio hacia arriba (separa de la foto y texto) */
+    padding-left: 15px; /* Alineación limpia con el margen de la descripción */
+}
+
+.contacto-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; 
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 26px;
+    text-decoration: underline;
+    font-weight: 600;
+    color: #E51A22; 
+    transition: color 0.3s ease;
+}
+
+.contacto-enlace:hover {
+    color: #E51A22;
+}
+
+.contacto-icono {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .autor-contenedor {
+        width: 100vw; 
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.sitio-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-top: 3px solid #E51A22;
+    
+
+    margin-top: auto; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-titulo {
+    color: #E51A22;
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-texto {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.footer-texto strong {
+    color: #ffffff;
+}
+
+.footer-texto-descripcion {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #999999;
+    line-height: 1.5;
+}
+
+.footer-barra-creditos {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+    text-align: center;
+    font-size: 12px;
+    color: #777777;
+}
+
+.footer-barra-creditos p {
+    margin: 0;
+}
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #ffffff;
+    border: 2px solid #E51A22;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #ffffff;
+    border-color: #E51A22;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+audio {
+    width: 100%;               
+    max-width: 500px;          
+    height: 54px;          
+    display: block;            
+    margin: 30px auto;        
+
+    border-radius: 30px;      
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    filter: sepia(20%) saturate(150%) hue-rotate(330deg); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+audio:hover {
+    transform: scale(1.02);  
+    box-shadow: 0 6px 20px rgba(227, 6, 19, 0.2); 
+}
+nav {
+    text-align: center;
+    background-color: #1a1a1a; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+
+    
+    position: sticky;       
+    top: 0;                 
+    z-index: 1000;          
+}
